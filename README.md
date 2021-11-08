@@ -1,4 +1,4 @@
-# ContrXT
+![](https://github.com/Crisp-Unimib/ContrXT/blob/master/img/contrxt_logo.jpeg)
 **A global, model-agnostic, contrastive explainer for any text classifier**
 
 ## Why do we need ContrXT?
