@@ -7,7 +7,7 @@
 Imagine we have a text classifier, let's say M1, that has been retrained with new data generating M2.
 
 1. Can we estimate to what extent the new model M2 classifies new data coherently to the past predictions made by the previous model M1?
-2. Why does the criteria used by M1 result in class _c_, but the M2 does not classify them as _c_ anymore?
+2. Why does the criteria used by M1 result in class _c_, but M2 does not use the same criteria to classify as _c_ anymore?
 3. Can we use natural language to transform the differences between models to make them comprehensible for the final users?
 
 Details on how ContrXT works can be found in this paper (bibtex here for citation). Here is a link to the promo video: TBD
