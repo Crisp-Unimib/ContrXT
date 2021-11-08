@@ -3,7 +3,7 @@
 # ContrXT
 ***A global, model-agnostic, contrastive explainer for any text classifier***
 
-## Why do we need ContrXT?
+## Why do we might need ContrXT?
 Imagine we have a text classifier, let's say M1, that has been retrained with new data generating M2.
 
 1. Can we estimate to what extent the new model M2 classifies new data coherently to the past predictions made by the previous model M1?
