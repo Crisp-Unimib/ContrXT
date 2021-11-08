@@ -1,6 +1,6 @@
 <img src="https://github.com/Crisp-Unimib/ContrXT/blob/master/contrxt_logo.jpeg" alt="drawing" width="150"/>
 # ContrXT
-**A global, model-agnostic, contrastive explainer for any text classifier**
+***A global, model-agnostic, contrastive explainer for any text classifier***
 
 ## Why do we need ContrXT?
 Imagine we have a text classifier, that now needs to be retrained to keep it updated with new data.
