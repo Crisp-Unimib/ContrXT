@@ -1,5 +1,5 @@
 # ContrXT
-**A global, model-agnostic, contrastive explainer for text any classifier**
+**A global, model-agnostic, contrastive explainer for any text classifier**
 
 ## Why do we need ContrXT?
 Imagine we have a text classifier, that now needs to be retrained to keep it updated with new data.
@@ -33,7 +33,7 @@ The indicators allow concentrating on classes that have changed more. For eample
 ![](https://github.com/Crisp-Unimib/ContrXT/blob/master/img/alt.atheism.png)
 
 The Natural Language Explanation for _atheism_ reveal the presence of the word _bill_ leads the retrained classifier M2 to assign the label _atheism_ to a specific record whilst the presence of such a feature was not a criterion for the previous classifier M1.
-Conversely, the explanation revelas that M1 used the feature _keith_ to assign the label, whilst M2 discarded this rule. Actually, both terms refer to the name of the posts' authors: _Bill_'s posts are only contained within the dataset used to retrain whilst _Keith_'s ones are more frequent in initial dataset rather than the second one (dataset taken from Jin, P., Zhang, Y., Chen, X., & Xia, Y. (2016, January). Bag-of-embeddings for text classification. In IJCAI (Vol. 16, pp. 2824-2830)).
+Conversely, the explanation revelas that M1 used the feature _keith_ to assign the label, whilst M2 discarded this rule. Actually, both terms refer to the name of the posts' authors: _Bill_'s posts are only contained within the dataset used to retrain whilst _Keith_'s ones are more frequent in initial dataset rather than the second one (dataset taken from Jin, P., Zhang, Y., Chen, X., & Xia, Y. Bag-of-embeddings for text classification. In IJCAI-2016).
 
 Finally, M2 discarded the rule _having political atheist_ that was sufficient for M1 for classifying the instance.
 
