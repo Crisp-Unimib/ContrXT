@@ -11,7 +11,7 @@ Imagine we have a text classifier, let's say M1, that has been retrained with ne
 3. Can we use natural language to explain the differences between models making them more comprehensible to final users?
 
 Details on how ContrXT works can be found in this paper (bibtex here for citation). Here is a link to the video below.
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/pwQdinaXmDI/0.jpg)](http://www.youtube.com/watch?v=pwQdinaXmDI "XontrXT demo video")
+![IMAGE ALT TEXT](http://img.youtube.com/vi/pwQdinaXmDI/0.jpg)](http://www.youtube.com/watch?v=pwQdinaXmDI "XontrXT demo video")
 
 ## What ContrXT can do?
 
