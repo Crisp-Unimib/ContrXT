@@ -88,3 +88,31 @@ the following command while in the main directory:
 ```
 python -m unittest discover
 ```
+
+## ContrXT as a Service through REST-API
+ContrXT provides REST-API to generate explanations for any text classifier.  Our API enables users to get the outcome of ContrXT as discussed above (i.e., Indicators and Natural languange explanations) with no need to install or configure the tool locally. The required input from user are (i) the training data and (ii) the predicted labels by the classifier of their choice. 
+Users are required to upload two csv files for two datasets for which the scema is shown in the following JSON.
+```
+schema = {
+         "type" : "csv",
+         "columns" : {
+             "corpus" : {"type" : "string"},
+             "category" : {"type" : "string"},
+             "predicted" : {"type" : "string"},
+         },
+     }
+```
+The \contrxtv's API can be invoked using a few lines code shown in Code below.
+```
+code to call \contrxt API, label=code:API2]
+import requests
+import Zipfile as zp
+import io
+files = {
+    'time_1': pd.read_csv('dt1.csv').to_csv().encode()
+    'time_2': pd.read_csv('dt1.csv').to_csv().encode()
+}
+r = requests.post('[URLandPort]',files=files)
+result = zp.ZipFile(io.BytesIO(r.content))
+```
+**Notice**. To avoid .... calls to our server, we ask users to ask for free credentials through this link. 
