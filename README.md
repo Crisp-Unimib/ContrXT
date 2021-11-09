@@ -103,7 +103,7 @@ schema = {
          },
      }
 ```
-The \contrxtv's API can be invoked using a few lines code shown in Code below.
+The ContrXT's API can be invoked using a few lines code shown in Code below.
 ```
 code to call \contrxt API, label=code:API2]
 import requests
