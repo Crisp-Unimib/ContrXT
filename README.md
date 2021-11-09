@@ -115,4 +115,4 @@ files = {
 r = requests.post('[URLandPort]',files=files)
 result = zp.ZipFile(io.BytesIO(r.content))
 ```
-**Notice**. To avoid .... calls to our server, we ask users to ask for free credentials through this link. 
+**Notice**. To avoid uncontrolled calls to our server, we ask users to ask for free credentials through this link. 
