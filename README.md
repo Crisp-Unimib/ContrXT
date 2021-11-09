@@ -105,7 +105,6 @@ schema = {
 ```
 The ContrXT's API can be invoked using a few lines code shown in Code below.
 ```
-code to call \contrxt API, label=code:API2]
 import requests
 import Zipfile as zp
 import io
