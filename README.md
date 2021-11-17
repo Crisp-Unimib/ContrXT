@@ -10,9 +10,10 @@ Imagine we have a text classifier, let's say M1, that has been retrained with ne
 2. Why does the criteria used by M1 result in class _c_, but M2 does not use the same criteria to classify as _c_ anymore?
 3. Can we use natural language to explain the differences between models making them more comprehensible to final users?
 
-Details on how ContrXT works can be found in this paper (bibtex here for citation). Here is a link to the demo video.
+Details on how ContrXT works can be found in this paper (bibtex here for citation at the end of the page). 
+Here is a link to the demo video.
 
-[![Everything Is AWESOME](https://img.youtube.com/vi/pwQdinaXmDI/hqdefault.jpg)](https://www.youtube.com/watch?v=pwQdinaXmDI "Everything Is AWESOME")
+[![Demo](https://img.youtube.com/vi/pwQdinaXmDI/hqdefault.jpg)](https://www.youtube.com/watch?v=pwQdinaXmDI "Demo")
 
 ## What ContrXT can do?
 
@@ -30,10 +31,13 @@ As optional parameters, the user can specify:
 ContrXT provides two outputs:
 ### (1) Indicators to estimate which classes are changing more!
 A picture estimating the differences among the classification criteria of both classifiers M1 and M2, that are **Add** and **Del** values. To estimate the degree of changes *among classes*, ContrXT also provides **add_global** and ***del_global***. In the case of a multiclass classifier,  ContrXT suggests focusing on classes that went through major alterations from M1 to M2, distinguishing between three groups according to their Add and Del values being above or below the 75th percentile.
+
 ![](https://github.com/Crisp-Unimib/ContrXT/blob/master/img/Add_Del_Magnitude_20N.png)
+
 The picture above is geneated by ContrXT automatically. It provides indicators of changes in classification criteria from model M1 to M2 for each _20newsgroup_ class, using a DT as surrogate (0.8 fidelity) to explain two BERT classifiers.
 ### (2) Natural Language Explanations for each class
 The indicators allow the user concentrating on classes that have changed more. For example, one might closely look at class _atheism_ as for this class the number of deleted paths is higher than the added ones
+
 ![](https://github.com/Crisp-Unimib/ContrXT/blob/master/img/alt.atheism.png)
 
 The Natural Language Explanation for _atheism_ reveals the presence of the word _bill_ leads the retrained classifier M2 to assign the label _atheism_ to a specific record, whilst the presence of such a feature was not a criterion for the previous classifier M1.
