@@ -116,3 +116,16 @@ r = requests.post('[URLandPort]',files=files)
 result = zp.ZipFile(io.BytesIO(r.content))
 ```
 **Notice**. To avoid an improper use of ContrXT'server resources, we ask users to ask for free credentials through this link. 
+
+**References**.
+To cite ContrXT please refer to the following paper 
+``
+@article{ASOC,
+	author = {Lorenzo Malandri and Fabio Mercorio and Mario Mezzanzanica and Andrea Seveso and Navid Nobani},
+	title = {ContrXT: Generating Contrastive Explanations from any Text Classifier},
+	year = {2021},
+	publisher = {Elsevier},
+	issn = {1566-2535},
+	journal = {Information Fusion}
+}
+``
