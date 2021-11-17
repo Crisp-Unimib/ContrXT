@@ -120,7 +120,7 @@ result = zp.ZipFile(io.BytesIO(r.content))
 **References**.
 To cite ContrXT please refer to the following paper 
 ```
-@article{ASOC,
+@article{ContrXT,
 	author = {Lorenzo Malandri and Fabio Mercorio and Mario Mezzanzanica and Andrea Seveso and Navid Nobani},
 	title = {ContrXT: Generating Contrastive Explanations from any Text Classifier},
 	year = {2021},
