@@ -52,9 +52,6 @@ Our experiments reveal Add/Del is not correlated with the models' accuracy.
 For example, we assessed the presence of a correlation between _Add/Del_ and the change in performance of the classifiers in terms of F1-score on _20newsgroup_. To this end, we computed the Spearman's \rho between the _Add_ of every class and its change in f1-score between the two classifiers.
 The correlation values are not significant, p=0.91$, ro=-0.11 for the _Add_ and p=0.65, ro=-0.04 for _Del_ indicator. This confirms that Add/Del are not related to the f1-score of the a trained model. Instead, they estimate its behaviour change handling new data, considering which rules have been added or deleted with respect to the past.
 
-## Limitation
-At the moment, we support explaining predictions for text classifiers only, but we are working to extend it to deal with tabular data as well.
-
 ## Installation
 
 In order to install ContrXT, clone this repository and then run:
@@ -82,7 +79,7 @@ Full documentation on how to install Graphviz on any platform is available
 
 ## Tutorials and Usage
 
-A complete example of ContrXT usage is provided in the notebook "ContrXT Demo".
+A complete example of ContrXT usage is provided in the notebook ["ContrXT Demo"](https://github.com/Crisp-Unimib/ContrXT/blob/master/ContrXT%20Demo.ipynb).
 Complete documentation of the package functions will also be available shortly.
 
 ## Running tests
@@ -119,6 +116,9 @@ r = requests.post('[URLandPort]', files=files)
 result = ZipFile(io.BytesIO(r.content))
 ```
 **Notice**. To avoid an improper use of ContrXT'server resources, we ask users to ask for free credentials through this link.
+
+## Limitation
+At the moment, we support explaining predictions for text classifiers only, but we are working to extend it to deal with tabular data as well.
 
 **References**.
 To cite ContrXT please refer to the following paper
