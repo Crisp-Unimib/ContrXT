@@ -10,16 +10,17 @@ Imagine we have a text classifier, let's say M1, that has been retrained with ne
 2. Why does the criteria used by M1 result in class _c_, but M2 does not use the same criteria to classify as _c_ anymore?
 3. Can we use natural language to explain the differences between models making them more comprehensible to final users?
 
-Details on how ContrXT works can be found in this paper (bibtex here for citation at the end of the page).
-Here is a link to the demo video.
-
-[![Demo](https://img.youtube.com/vi/pwQdinaXmDI/hqdefault.jpg)](https://www.youtube.com/watch?v=pwQdinaXmDI "Demo")
-
 ## What ContrXT can do?
 
 ContrXT is about **explaining how a classifier changed its predictions through time.** Alternatively, **it can be used to explain the differences in the classification behaviours of two distinct classifiers at a time.**
 
 ContrXT takes as input the prediction of two distinct classifiers M1 and M2. Then, it traces the decision criteria of both classifiers by encoding the changes in the decision logic through Binary Decision Diagrams. Then (ii) it provides ``global, model-agnostic, time-contrastive (T-contrast)`` explanations in natural language, estimating why -and to what extent- the model has modified its behaviour over time.
+
+Details on how ContrXT works can be found in this paper (bibtex here for citation at the end of the page).
+Here is a link to the demo video.
+
+[![Demo](https://img.youtube.com/vi/pwQdinaXmDI/hqdefault.jpg)](https://www.youtube.com/watch?v=pwQdinaXmDI "Demo")
+
 
 ## What ContrXT needs as input?
 ContrXT takes as input the ``training data`` and ``the labels`` predicted by the classifier. This means you don't need to wrap ContrXT within your code at all!
