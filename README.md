@@ -23,7 +23,7 @@ Here is a link to the demo video.
 
 
 ## What ContrXT needs as input?
-ContrXT takes as input the ``training data`` and ``the labels`` predicted by the classifier. This means you don't need to wrap ContrXT within your code at all!
+ContrXT takes as input the ``feature data`` (can be training or test, labelled or unlabelled)  and the corresponding ``labels`` predicted by the classifier. This means you don't need to wrap ContrXT within your code at all!
 As optional parameters, the user can specify:
 - the coverage of the dataset to be used (default is 100%); otherwise a sampling procedure is used;
 - to obtain explanations either for the multiclass case (default: one class vs all) or the two-class case (class vs class, by restricting the surrogate generation  to those classes);
