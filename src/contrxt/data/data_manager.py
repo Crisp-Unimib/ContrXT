@@ -9,13 +9,12 @@ from contrxt.util.logger import build_logger
 
 class DataManager():
 
-    def __init__(self, X, Y, predicted_labels, time_label):
+    def __init__(self, X, Y_predicted, time_label):
         self.logger = build_logger(logging.DEBUG, __name__, 'logs/trace.log')
 
         self.X = X
-        self.Y = pd.Series([self.check_column_names(y) for y in Y.astype('str')])
-        self.predicted_labels = pd.Series([self.check_column_names(y) for y in predicted_labels.astype('str')])
-        self.predicted_labels_binarized = {}
+        self.Y_predicted = pd.Series([self.check_column_names(y) for y in Y_predicted])
+        self.Y_predicted_binarized = {}
         self.time_label = time_label
         self.feature_names = None
         self.surrogate_train_data = {}
@@ -23,16 +22,14 @@ class DataManager():
         try:
             if self.X.shape[1]:
                 self.df = pd.DataFrame(self.X.copy())
-                self.df['Y'] = self.Y.copy()
-                self.df['predicted_labels'] = self.predicted_labels.copy()
+                self.df['Y_predicted'] = self.Y_predicted.copy()
         except IndexError:
             self.df = pd.DataFrame({
                 'X': self.X.copy(),
-                'Y': self.Y.copy(),
-                'predicted_labels': self.predicted_labels.copy(),
+                'Y_predicted': self.Y_predicted.copy(),
             })
 
-        self.classes = self.Y.unique().astype('str')
+        self.classes = self.Y_predicted.unique().astype('str')
         self.classes.sort()
 
     def filter_classes(self, classes: List):
@@ -46,12 +43,14 @@ class DataManager():
         '''
         self.classes = classes
         self.classes.sort()
-        self.df = self.df[self.df['Y'].isin(self.classes)]
+        self.df = self.df[self.df['Y_predicted'].isin(self.classes)]
 
     @staticmethod
     def check_column_names(st: string):
+        st = str(st)
         st = st.replace('/', '').replace(' ', '_').replace('-', '_')
         st = st.replace('?', 'unknown').replace('(', '').replace(')', '')
+        st = ''.join([x.title() for x in st.split('_')])
         return st
 
     @staticmethod
@@ -73,4 +72,4 @@ class DataManager():
         pass
 
     def count_rule_occurrence(self, rule):
-        return 0
+        return 1

@@ -123,7 +123,7 @@ class Trace:
                 if self.surrogate_type == 'fair':
                     surrogate_explainer = FairTreeSurrogate(
                         self.data_manager[time_label].surrogate_train_data[class_id],
-                        self.data_manager[time_label].predicted_labels_binarized[class_id],
+                        self.data_manager[time_label].Y_predicted_binarized[class_id],
                         time_label, class_id,
                         self.data_manager[time_label].feature_names,
                         self.hyperparameters[time_label][class_id],
@@ -131,7 +131,7 @@ class Trace:
                 else:
                     surrogate_explainer = SklearnSurrogate(
                         self.data_manager[time_label].surrogate_train_data[class_id],
-                        self.data_manager[time_label].predicted_labels_binarized[class_id],
+                        self.data_manager[time_label].Y_predicted_binarized[class_id],
                         time_label, class_id,
                         self.data_manager[time_label].feature_names,
                         self.hyperparameters[time_label][class_id],

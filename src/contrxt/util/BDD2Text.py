@@ -98,7 +98,7 @@ class BDD2Text(object):
         temp = pd.read_csv(file_path, sep=';', header=None)
         temp.columns = ['class', 'path', 'bdd', 'N']
         temp = temp[['class', 'bdd', 'path', 'N']]
-        #temp.columns = ['class', 'mode', 'path', 'N']
+        temp['class'] = temp['class'].astype('str')
 
         def string_to_dict(string):
             """stolen from https://stackoverflow.com/a/58561819/5842939"""

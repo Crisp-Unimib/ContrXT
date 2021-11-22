@@ -14,11 +14,11 @@ class TextDataManager(contrxt.data.data_manager.DataManager):
     '''
     '''
 
-    def __init__(self, X, Y, predicted_labels, time_label):
+    def __init__(self, X, Y_predicted, time_label):
         '''
         '''
         X = pd.Series([self.check_var_names(x) for x in X])
-        super().__init__(X, Y, predicted_labels, time_label)
+        super().__init__(X, Y_predicted, time_label)
 
     def generate_data_predictions(self, percent_dataset: int):
         '''Generated predictions for both datasets.
@@ -42,14 +42,13 @@ class TextDataManager(contrxt.data.data_manager.DataManager):
         for i, class_id in enumerate(self.classes):
 
             data_class = data.copy()
-            data_class['Y'] = data_class['Y'].astype('str')
             class_id = str(class_id)
             # Balancing
-            n_positive_class = sum(data_class['Y'] == class_id)
+            n_positive_class = sum(data_class['Y_predicted'] == class_id)
             try:
                 data_class = pd.concat([
-                    data_class[data_class['Y'] == class_id],
-                    data_class[data_class['Y'] != class_id].sample(n=n_positive_class, replace=False, random_state=42),
+                    data_class[data_class['Y_predicted'] == class_id],
+                    data_class[data_class['Y_predicted'] != class_id].sample(n=n_positive_class, replace=False, random_state=42),
                 ])
             except ValueError:
                 pass
@@ -57,17 +56,10 @@ class TextDataManager(contrxt.data.data_manager.DataManager):
 
             self.surrogate_train_data[class_id] = onehot_vectorizer.transform(data_class['X'])
 
-            try:
-                true_labels = preprocessing.label_binarize(data_class['Y'], classes=self.classes)
-                col_position = np.where(self.classes == class_id)[0][0]
-                self.Y[class_id] = true_labels[:, col_position]
-            except:
-                self.Y[class_id] = data_class['Y']
-
-            if data_class['predicted_labels'].dtype == np.dtype(np.int) or data_class['predicted_labels'].dtype == np.dtype(np.int64):
-                self.predicted_labels_binarized[class_id] = np.array([1 if int(x) == i else 0 for x in data_class['predicted_labels']])
+            if data_class['Y_predicted'].dtype == np.dtype(np.int) or data_class['Y_predicted'].dtype == np.dtype(np.int64):
+                self.Y_predicted_binarized[class_id] = np.array([1 if int(x) == i else 0 for x in data_class['Y_predicted']])
             else:
-                self.predicted_labels_binarized[class_id] = np.array([1 if x == class_id else 0 for x in data_class['predicted_labels']])
+                self.Y_predicted_binarized[class_id] = np.array([1 if x == class_id else 0 for x in data_class['Y_predicted']])
 
         self.logger.info(f'Finished predicting {self.time_label}')
 

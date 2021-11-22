@@ -11,8 +11,8 @@ class ContrXT():
     '''
 
     def __init__(self,
-                 X_t1, Y_t1, predicted_labels_t1,
-                 X_t2, Y_t2, predicted_labels_t2,
+                 X_t1, predicted_labels_t1,
+                 X_t2, predicted_labels_t2,
                  data_type='text',
                  hyperparameters_selection=True,
                  log_level=logging.INFO,
@@ -32,13 +32,13 @@ class ContrXT():
 
         if data_type == 'text':
             self.data_manager = {
-                'time_1': TextDataManager(X_t1, Y_t1, predicted_labels_t1, 'time_1'),
-                'time_2': TextDataManager(X_t2, Y_t2, predicted_labels_t2, 'time_2'),
+                'time_1': TextDataManager(X_t1, predicted_labels_t1, 'time_1'),
+                'time_2': TextDataManager(X_t2, predicted_labels_t2, 'time_2'),
             }
         else:
             self.data_manager = {
-                'time_1': TabularDataManager(X_t1, Y_t1, predicted_labels_t1, 'time_1'),
-                'time_2': TabularDataManager(X_t2, Y_t2, predicted_labels_t2, 'time_2'),
+                'time_1': TabularDataManager(X_t1, predicted_labels_t1, 'time_1'),
+                'time_2': TabularDataManager(X_t2, predicted_labels_t2, 'time_2'),
             }
 
         self.trace = None
