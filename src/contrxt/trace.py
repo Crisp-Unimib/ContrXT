@@ -12,7 +12,6 @@ import pandas as pd
 from contrxt.util.helpers import jaccard_similarity
 from contrxt.util.logger import build_logger
 from contrxt.surrogate.sklearn_surrogate import SklearnSurrogate
-from contrxt.surrogate.fair_tree_surrogate import FairTreeSurrogate
 
 
 class Trace:
