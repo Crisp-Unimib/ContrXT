@@ -56,7 +56,7 @@ class TextDataManager(contrxt.data.data_manager.DataManager):
 
             self.surrogate_train_data[class_id] = onehot_vectorizer.transform(data_class['X'])
 
-            if data_class['Y_predicted'].dtype == np.dtype(np.int) or data_class['Y_predicted'].dtype == np.dtype(np.int64):
+            if data_class['Y_predicted'].dtype == np.dtype(int) or data_class['Y_predicted'].dtype == np.dtype(np.int64):
                 self.Y_predicted_binarized[class_id] = np.array([1 if int(x) == i else 0 for x in data_class['Y_predicted']])
             else:
                 self.Y_predicted_binarized[class_id] = np.array([1 if x == class_id else 0 for x in data_class['Y_predicted']])

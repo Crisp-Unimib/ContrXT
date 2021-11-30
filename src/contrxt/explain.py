@@ -12,18 +12,19 @@ from contrxt.util.helpers import union, jaccard_distance
 from contrxt.util.logger import build_logger
 from contrxt.util.BDD2Text import BDD2Text
 
-os.environ['PATH'] += os.pathsep + 'C:/Program Files (x86)/Graphviz2.38/bin'
-
 class Explain():
     '''
     '''
 
-    def __init__(self, data_manager, save_path, log_level=logging.INFO,
+    def __init__(self, data_manager,
+                 save_path, graphviz_path,
+                 log_level=logging.INFO,
                  save_bdds=True, save_csvs=True):
         '''Initialize explain object
         '''
 
         self.logger = build_logger(log_level, __name__, 'logs/explain.log')
+        os.environ['PATH'] += os.pathsep + graphviz_path
 
         self.data_manager = data_manager
         self.save_path = save_path

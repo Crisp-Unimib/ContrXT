@@ -14,17 +14,19 @@ class ContrXT():
                  X_t1, predicted_labels_t1,
                  X_t2, predicted_labels_t2,
                  data_type='text',
-                 hyperparameters_selection=True,
+                 hyperparameters_selection=False,
                  log_level=logging.INFO,
                  save_path='results',
+                 graphviz_path='C:/Program Files (x86)/Graphviz2.38/bin',
                  surrogate_type='sklearn',
                  save_surrogates=False,
                  save_csvs=True,
-                 save_bdds=True):
+                 save_bdds=False):
 
         self.log_level = log_level
         self.hyperparameters_selection = hyperparameters_selection
         self.save_path = save_path
+        self.graphviz_path = graphviz_path
         self.surrogate_type = surrogate_type
         self.save_surrogates = save_surrogates
         self.save_csvs = save_csvs
@@ -41,12 +43,6 @@ class ContrXT():
                 'time_2': TabularDataManager(X_t2, predicted_labels_t2, 'time_2'),
             }
 
-        self.trace = None
-        self.explain = None
-
-    def run_trace(self, percent_dataset: float=1):
-        '''
-        '''
         self.trace = Trace(
             self.data_manager,
             log_level=self.log_level,
@@ -56,6 +52,11 @@ class ContrXT():
             save_surrogates=self.save_surrogates,
             save_csvs=self.save_csvs,
         )
+        self.explain = None
+
+    def run_trace(self, percent_dataset: float=1):
+        '''
+        '''
         self.trace.run_trace(percent_dataset)
 
     def run_explain(self):
@@ -64,6 +65,7 @@ class ContrXT():
         self.explain = Explain(
             self.data_manager,
             save_path=self.save_path,
+            graphviz_path=self.graphviz_path,
             log_level=self.log_level,
             save_bdds=self.save_bdds,
             save_csvs=self.save_csvs,

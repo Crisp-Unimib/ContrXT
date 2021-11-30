@@ -52,7 +52,7 @@ class TabularDataManager(contrxt.data.data_manager.DataManager):
 
             self.surrogate_train_data[class_id] = data_class[self.feature_names].copy()
 
-            if data_class['Y_predicted'].dtype == np.dtype(np.int) or data_class['Y_predicted'].dtype == np.dtype(np.int64):
+            if data_class['Y_predicted'].dtype == np.dtype(int) or data_class['Y_predicted'].dtype == np.dtype(np.int64):
                 self.Y_predicted_binarized[class_id] = np.array([1 if int(x) == i else 0 for x in data_class['Y_predicted']])
             else:
                 self.Y_predicted_binarized[class_id] = np.array([1 if x == class_id else 0 for x in data_class['Y_predicted']])
@@ -67,6 +67,9 @@ class TabularDataManager(contrxt.data.data_manager.DataManager):
         contains = [elem[0] for elem in rule_dict.items() if elem[1] == 1]
         avoids = [elem[0] for elem in rule_dict.items() if elem[1] == 0]
         for _, row in self.X.iterrows():
-            if all(row[contains] == 1) and all(row[avoids] == 0):
-                count += 1
+            try:
+                if all(row[contains] == 1) and all(row[avoids] == 0):
+                    count += 1
+            except KeyError:
+                continue
         return count

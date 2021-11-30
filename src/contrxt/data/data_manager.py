@@ -60,6 +60,8 @@ class DataManager():
         banned_keywords = ['and', 'or', 'xor', 'not', 'nor', 'nand']
         st_complete = []
         for x in st.split(' '):
+            if not x:
+                continue
             if x.lower().strip() in banned_keywords:
                 continue
             if x[0] in string.digits:
