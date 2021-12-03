@@ -205,9 +205,6 @@ class Explain():
         df['still_global'] = [x if x==x else 0 for x in df['sat_still'] / max_sat_still]
         return df
 
-    def calculate_malandri(self):
-        return 0
-
     def start_comparison(self, class_id):
         '''Begins comparison of one class
         '''
@@ -231,18 +228,20 @@ class Explain():
         self.logger.warning(f'Timeout for class {class_id}')
         return False
 
-    def BDD2Text_single(self, class_id):
-        '''Prints BDD2Text for class
+    def BDD2Text(self, classes=None):
+        '''Prints BDD2Text for selected classes.
         '''
-        text = BDD2Text(f'{self.save_path}/paths_add_del.csv', class_id, 85)
-        text.simple_text()
-
-    def BDD2Text(self):
-        '''Prints BDD2Text for all classes
-        '''
-        for class_id in self.bdd_dict:
+        def create_BDD2Text(class_id):
             text = BDD2Text(f'{self.save_path}/paths_add_del.csv', class_id, 85)
             text.simple_text()
+        if not classes:
+            for class_id in self.bdd_dict:
+                create_BDD2Text(class_id)
+        if isinstance(classes, list):
+            for class_id in classes:
+                create_BDD2Text(class_id)
+        if isinstance(classes, str):
+            create_BDD2Text(classes)
 
     def run_explain(self):
         '''Run explain for each class

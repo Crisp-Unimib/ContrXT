@@ -55,7 +55,7 @@ The correlation values are not significant, p=0.91$, ro=-0.11 for the _Add_ and 
 
 ## Installation
 
-In order to install ContrXT, clone this repository and then run:
+In order to install ContrXT, clone this repository and then run in the main directory:
 
 ```
 pip install .
@@ -80,7 +80,7 @@ Full documentation on how to install Graphviz on any platform is available
 
 ## Tutorials and Usage
 
-A complete example of ContrXT usage is provided in the notebook ["ContrXT Demo"](https://github.com/Crisp-Unimib/ContrXT/blob/master/ContrXT%20Demo.ipynb).
+A complete example of ContrXT usage is provided in the notebook ["ContrXT Demo"](https://github.com/Crisp-Unimib/ContrXT/blob/master/ContrXT%20Demo.ipynb) inside of the main repository folder.
 Complete documentation of the package functions will also be available shortly.
 
 ## Running tests
@@ -120,7 +120,7 @@ result = ZipFile(io.BytesIO(r.content))
 ## Limitation
 At the moment, we support explaining predictions for text classifiers only, but we are working to extend it to deal with tabular data as well.
 
-**References**.
+## References
 To cite ContrXT please refer to the following paper
 ```
 @article{ContrXT,

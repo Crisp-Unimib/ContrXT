@@ -106,3 +106,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 *.pyc
+tests/test_results/
