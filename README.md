@@ -16,7 +16,7 @@ ContrXT is about **explaining how a classifier changed its predictions through t
 
 ContrXT takes as input the predictions of two distinct classifiers M1 and M2. Then, it traces the decision criteria of both classifiers by encoding the changes in the decision logic through Binary Decision Diagrams. Then (ii) it provides ``global, model-agnostic, time-contrastive (T-contrast)`` explanations in natural language, estimating why -and to what extent- the model has modified its behaviour over time.
 
-Details on how ContrXT works can be found in this paper (bibtex here for citation at the end of the page).
+Details on how ContrXT works can be found in [this paper].(https://www.sciencedirect.com/science/article/pii/S1566253521002426) 
 Here is a link to the demo video.
 
 [![Demo](https://img.youtube.com/vi/pwQdinaXmDI/hqdefault.jpg)](https://www.youtube.com/watch?v=pwQdinaXmDI "Demo")
@@ -121,7 +121,7 @@ result = ZipFile(io.BytesIO(r.content))
 At the moment, we support explaining predictions for text classifiers only, but we are working to extend it to deal with tabular data as well.
 
 ## References
-To cite ContrXT please refer to the following paper
+To cite ContrXT please refer to [the following paper](https://www.sciencedirect.com/science/article/pii/S1566253521002426)
 ```
 @article{ContrXT,
 	author = {Lorenzo Malandri and Fabio Mercorio and Mario Mezzanzanica and Andrea Seveso and Navid Nobani},
