@@ -129,6 +129,10 @@ To cite ContrXT please refer to the following paper
 	year = {2021},
 	publisher = {Elsevier},
 	issn = {1566-2535},
+    year = {2021},
+	issn = {1566-2535},
+	doi = {https://doi.org/10.1016/j.inffus.2021.11.016},
+	url = {https://www.sciencedirect.com/science/article/pii/S1566253521002426},
 	journal = {Information Fusion}
 }
 ```
