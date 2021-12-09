@@ -107,3 +107,4 @@ dmypy.json
 .pyre/
 *.pyc
 tests/test_results/
+results/
