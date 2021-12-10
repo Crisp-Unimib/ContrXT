@@ -114,7 +114,7 @@ files = {
 r = requests.post('[URLandPort]', files=files)
 result = ZipFile(io.BytesIO(r.content))
 ```
-**Notice**. To avoid improper use of ContrXT'server resources, we ask users to ask for free credentials through this link.
+**Notice**. To avoid improper use of ContrXT'server resources, we ask users to ask for free credentials through this [link](https://tinyurl.com/contrxt-request-form).
 
 ## Limitation
 Currently, we support explaining predictions for text classifiers only, but we are working to extend it to deal with tabular data.
