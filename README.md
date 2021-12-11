@@ -18,7 +18,7 @@ ContrXT takes as input the predictions of two distinct classifiers M1 and M2. Th
 
 Details on how ContrXT works can be found in [this paper](https://www.sciencedirect.com/science/article/pii/S1566253521002426)
 Below a link to the demo video.
-[![Demo](https://img.youtube.com/vi/pwQdinaXmDI/hqdefault.jpg)](https://www.youtube.com/watch?v=pwQdinaXmDI "Demo")
+[![Demo](https://img.youtube.com/vi/pwQdinaXmDI/hqdefault.jpg)](https://www.youtube.com/watch?v=Dnw2M995lus "Demo")
 
 
 ## What ContrXT needs as input?
