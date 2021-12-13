@@ -79,7 +79,7 @@ Full documentation on how to install Graphviz on any platform is available
 
 ## Tutorials and Usage
 
-A complete example of ContrXT usage is provided in the notebook ["ContrXT Demo"](https://github.com/Crisp-Unimib/ContrXT/blob/master/ContrXT%20Demo.ipynb) inside of the main repository folder.
+A complete example of ContrXT usage is provided in the notebook ["ContrXT Demo"](https://github.com/Crisp-Unimib/ContrXT/blob/master/ContrXT%20Demo.ipynb) inside of the main repository folder. A notebook example with ML model training is also available in this repository, which can also be accessed in this ["Google Colab notebook"](https://colab.research.google.com/drive/1hb4KN0SYxdj9SaExqqFGmAXAIyUnBVnA?usp=sharing).
 Complete documentation of the package functions will also be available shortly.
 
 ## Running tests
