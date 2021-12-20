@@ -1,6 +1,7 @@
 <img src="https://github.com/Crisp-Unimib/ContrXT/blob/master/img/contrxt_logo.jpeg" alt="drawing" width="150"/>
+
 [![Documentation Status](https://readthedocs.org/projects/contrxt/badge/?version=latest)](https://contrxt.readthedocs.io/en/latest/?badge=latest)
-[![DOI:10.1016/j.inffus.2021.11.016](http://img.shields.io/badge/DOI-10.1016/j.inffus.2021.11.016-blue.svg)](<doi link>)
+[![DOI:10.1016/j.inffus.2021.11.016](http://img.shields.io/badge/DOI-10.1016/j.inffus.2021.11.016-blue.svg)](https://doi.org/10.1016/j.inffus.2021.11.016)
 
 # ContrXT
 ***A global, model-agnostic, contrastive explainer for any text classifier***
