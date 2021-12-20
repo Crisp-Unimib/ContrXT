@@ -20,15 +20,15 @@ If you are on Linux or Mac, you should be able to install it by running:
 
    (.venv) $ pip install pyeda
 
-   However, if you are on Windows, we found that the best way to install is
-   through `Christophe Gohlke's pythonlibs page<https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyeda/>`_.
+However, if you are on Windows, we found that the best way to install is
+through `Christophe Gohlke's pythonlibs page<https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyeda/>`_.
 
-   For further information, please consult the official PyEDA
-   `installation documentation<https://pyeda.readthedocs.io/en/latest/install.html>`_.
+For further information, please consult the official PyEDA
+`installation documentation<https://pyeda.readthedocs.io/en/latest/install.html>`_.
 
-   To produce the PDF files, a Graphviz installation is also required.
-   Full documentation on how to install Graphviz on any platform is available
-   `here<https://graphviz.org/download/>`_.
+To produce the PDF files, a Graphviz installation is also required.
+Full documentation on how to install Graphviz on any platform is available
+`here<https://graphviz.org/download/>`_.
 
 Using ContrXT
 ----------------
