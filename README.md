@@ -1,4 +1,4 @@
-<img src="https://github.com/Crisp-Unimib/ContrXT/blob/master/img/contrxt_logo.jpeg" alt="drawing" width="150"/>
+
 
 [![Documentation Status](https://readthedocs.org/projects/contrxt/badge/?version=latest)](https://contrxt.readthedocs.io/en/latest/?badge=latest)
 [![Pypi Downloads](https://img.shields.io/pypi/dm/contrxt.svg?label=Pypi%20downloads)](
