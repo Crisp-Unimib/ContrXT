@@ -59,7 +59,13 @@ The correlation values are not significant, p=0.91$, ro=-0.11 for the _Add_ and 
 
 ## Installation
 
-To install ContrXT, clone this repository and then run in the main directory:
+ContrXT is available on [PyPi](https://pypi.org/project/contrxt/). Simply run:
+
+```
+pip install contrxt
+```
+
+Or clone the repository and run:
 
 ```
 pip install .
