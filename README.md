@@ -12,7 +12,7 @@ https://pypi.org/project/contrxt/)
 Imagine we have a text classifier, let's say M1, that is retrained with new data generating M2.
 
 1. Can we estimate to what extent M2 classifies new data coherently to the past predictions made by the previous model M1?
-2. Why does the criteria used by M1 result in class _c_, but M2 does not use the same criteria to classify as _c_ anymore?
+2. Why do the criteria used by M1 result in class _c_, but M2 does not use the same criteria to classify as _c_ anymore?
 3. Can we use natural language to explain the differences between models making them more comprehensible to final users?
 
 ## What can ContrXT do?
