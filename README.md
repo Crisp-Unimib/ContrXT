@@ -45,12 +45,18 @@ The indicators allow the user to concentrate on classes that have changed more. 
 
 ![](/img/alt.atheism.png)
 
-The Natural Language Explanation for _atheism_ reveals the presence of the word _bill_ leads the retrained classifier M2 to assign the label _atheism_ to a specific record, whilst the presence of such a feature was not a criterion for the previous classifier M1.
+The Natural Language Explanation (NLE) for _atheism_ reveals the presence of the word _bill_ leads the retrained classifier M2 to assign the label _atheism_ to a specific record, whilst the presence of such a feature was not a criterion for the previous classifier M1.
 Conversely, the explanation shows that M1 used the feature _keith_ to assign the label, whilst M2 discarded this rule.
 
 Both terms refer to the name of the posts' authors: _Bill_'s posts are only contained within the dataset used to retrain whilst _Keith_'s ones are more frequent in the initial dataset rather than the second one (dataset taken from _Jin, P., Zhang, Y., Chen, X., & Xia, Y. Bag-of-embeddings for text classification. In IJCAI-2016_).
 
 Finally, M2 discarded the rule _having political atheist_ that was sufficient for M1 for classifying the instance.
+
+The NLE shows the differences between the two models. However, a user might also wish to see example instances in the datasets where these rules apply. 
+
+To do so, ContrXT provides the *get_rule_examples* function, which requires the user to specify a rule to be applied and the number of examples to show.
+
+![](/img/get_examples.PNG)
 
 ## Do explanations lead to new insights?
 Our experiments reveal Add/Del is not correlated with the models' accuracy.
