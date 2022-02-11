@@ -52,11 +52,12 @@ Both terms refer to the name of the posts' authors: _Bill_'s posts are only cont
 
 Finally, M2 discarded the rule _having political atheist_ that was sufficient for M1 for classifying the instance.
 
+### (3) Get Rule Examples
 The NLE shows the differences between the two models. However, a user might also wish to see example instances in the datasets where these rules apply. 
 
 To do so, ContrXT provides the *get_rule_examples* function, which requires the user to specify a rule to be applied and the number of examples to show.
 
-![](/img/get_examples.PNG)
+<img src="/img/get_examples.PNG" width="600">
 
 ## Do explanations lead to new insights?
 Our experiments reveal Add/Del is not correlated with the models' accuracy.
