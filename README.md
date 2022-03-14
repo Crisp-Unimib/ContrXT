@@ -1,10 +1,12 @@
 
 
 [![Documentation Status](https://readthedocs.org/projects/contrxt/badge/?version=latest)](https://contrxt.readthedocs.io/en/latest/?badge=latest)
-[![Pypi Downloads](https://img.shields.io/pypi/dm/contrxt.svg?label=Pypi%20downloads)](
-https://pypi.org/project/contrxt/)
+[![Pypi Downloads](https://img.shields.io/pypi/dm/contrxt.svg?label=Pypi%20downloads)](https://pypi.org/project/contrxt/)
 [![DOI:10.1016/j.inffus.2021.11.016](http://img.shields.io/badge/DOI-10.1016/j.inffus.2021.11.016-blue.svg)](https://doi.org/10.1016/j.inffus.2021.11.016)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hb4KN0SYxdj9SaExqqFGmAXAIyUnBVnA?usp=sharing)
+
+[![Stars](https://img.shields.io/github/stars/Crisp-Unimib/ContrXT?style=social)](https://github.com/Crisp-Unimib/ContrXT)
+[![Watchers](https://img.shields.io/github/watchers/Crisp-Unimib/ContrXT?style=social)](https://github.com/Crisp-Unimib/ContrXT)
 
 # ContrXT
 ***A global, model-agnostic, contrastive explainer for any text classifier***
