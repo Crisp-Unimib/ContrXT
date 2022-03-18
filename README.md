@@ -31,7 +31,7 @@ Details on how ContrXT works can be found in [this paper](https://www.sciencedir
 Below a link to the [demo video (4K)](https://www.youtube.com/watch?v=Dnw2M995lus)
 
 
-<video src="https://user-images.githubusercontent.com/12170307/159011649-04277ac0-d040-4108-adfd-998e65c4bf4b.mp4" controls="controls" style="max-width: 500px;">
+<video src="https://user-images.githubusercontent.com/12170307/159011649-04277ac0-d040-4108-adfd-998e65c4bf4b.mp4" controls="controls" style="max-width: 600px;">
 </video>
 
 ## What ContrXT needs as input?
