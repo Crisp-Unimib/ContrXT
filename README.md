@@ -11,6 +11,9 @@
 # ContrXT
 ***A global, model-agnostic, contrastive explainer for any text classifier***
 
+* TOC
+{:toc}
+
 ## Why do we might need ContrXT?
 Imagine we have a text classifier, let's say M1, that is retrained with new data generating M2.
 
