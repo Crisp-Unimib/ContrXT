@@ -1,3 +1,4 @@
 theme: jekyll-theme-cayman
 description: "A global, model-agnostic, contrastive explainer for any text classifier"
 show_downloads: [true]
+markdown: kramdown
