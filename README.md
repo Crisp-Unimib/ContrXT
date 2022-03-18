@@ -31,6 +31,8 @@ Details on how ContrXT works can be found in [this paper](https://www.sciencedir
 Below a link to the [demo video (4K)](https://www.youtube.com/watch?v=Dnw2M995lus)
 
 https://user-images.githubusercontent.com/12170307/159011649-04277ac0-d040-4108-adfd-998e65c4bf4b.mp4
+<video src="https://user-images.githubusercontent.com/12170307/159011649-04277ac0-d040-4108-adfd-998e65c4bf4b.mp4" controls="controls" style="max-width: 730px;">
+</video>
 
 ## What ContrXT needs as input?
 ContrXT takes as input the _"feature data"_ (can be training or test, labelled or unlabelled)  and the corresponding _"labels"_ predicted by the classifier. This means you don't need to wrap ContrXT within your code at all!
