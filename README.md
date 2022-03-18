@@ -25,8 +25,9 @@ ContrXT is about **explaining how a classifier changed its predictions through t
 ContrXT takes as input the training data and predictions of two distinct classifiers M1 and M2. Then, it traces the decision criteria of both classifiers by encoding the changes in the decision logic through Binary Decision Diagrams. Then (ii) it provides "global, model-agnostic, time-contrastive (T-contrast) "explanations in natural language, estimating why -and to what extent- the model has modified its behaviour over time.
 
 Details on how ContrXT works can be found in [this paper](https://www.sciencedirect.com/science/article/pii/S1566253521002426)
-Below a link to the demo video.
-[![Demo](https://img.youtube.com/vi/pwQdinaXmDI/hqdefault.jpg)](https://www.youtube.com/watch?v=Dnw2M995lus "Demo")
+Below a link to the [demo video](https://www.youtube.com/watch?v=Dnw2M995lus)
+
+[![Demo](https://j.gifs.com/Vv2oY9.gif)
 
 
 ## What ContrXT needs as input?
