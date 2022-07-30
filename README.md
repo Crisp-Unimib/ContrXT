@@ -160,4 +160,21 @@ To cite ContrXT please refer to [the following paper](https://www.sciencedirect.
 	url = {https://www.sciencedirect.com/science/article/pii/S1566253521002426},
 	journal = {Information Fusion}
 }
+
+@inproceedings{ContrXTdemo,
+  author    = {Lorenzo Malandri and
+               Fabio Mercorio and
+               Mario Mezzanzanica and
+               Navid Nobani and
+               Andrea Seveso},
+  title     = {The Good, the Bad, and the Explainer: {A} Tool for Contrastive Explanations
+               of Text Classifiers},
+  booktitle = {Proceedings of the Thirty-First International Joint Conference on
+               Artificial Intelligence, {IJCAI} 2022, Vienna, Austria, 23-29 July
+               2022},
+  pages     = {5936--5939},
+  year      = {2022},
+  url       = {https://doi.org/10.24963/ijcai.2022/858},
+  doi       = {10.24963/ijcai.2022/858}
+}
 ```
